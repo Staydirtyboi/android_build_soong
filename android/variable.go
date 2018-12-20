@@ -138,6 +138,11 @@ type variableProperties struct {
 		Target_shim_libs struct {
 			Cppflags []string
 		}
+
+          	Target_process_sdk_version_override struct {
+            		Cppflags []string
+                }
+
 	} `android:"arch_variant"`
 }
 
@@ -263,6 +268,7 @@ type productVariables struct {
 	Needs_prelink_support      *bool `json:",omitempty"`
 	Needs_non_pie_support      *bool `json:",omitempty"`
 	Target_shim_libs           *string `json:",omitempty"`
+	Target_process_sdk_version_override *string `json:",omitempty"`
 }
 
 func boolPtr(v bool) *bool {
