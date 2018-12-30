@@ -133,6 +133,10 @@ type variableProperties struct {
 		          Cflags []string
 	        }
 
+          	Uses_generic_camera_parameter_library struct {
+		            Srcs []string
+ 	        }
+
 		Target_shim_libs struct {
 			Cppflags []string
 		}
@@ -273,6 +277,10 @@ type productVariables struct {
 	Additional_gralloc_10_usage_bits  *string `json:",omitempty"`
 
 	Has_legacy_camera_hal1  *bool `json:",omitempty"`
+
+	Uses_generic_camera_parameter_library *bool `json:",omitempty"`
+
+	Specific_camera_parameter_library  *string `json:",omitempty"`
 
 	Target_shim_libs  *string `json:",omitempty"`
 
